@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+<head>
+    <title>iTMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=gb2312" />
+    <link rel="stylesheet" href="JS/jquery.mobile-1.3.2.min.css">
+<!--    <script src="/JS/jquery.js"></script>
+    <script src="/JS/jquery.mobile-1.3.2.min.js"></script>-->
+    <script src="JS/lazyload.js" type="text/javascript"></script>
+    <script type="text/javascript" charset="utf-8">
+        function loadComplete(){
+            //instead of document.read();
+        }
+        function loadscript() {
+            LazyLoad.loadOnce([
+                'JS/jquery.js',
+                'JS/jquery.mobile-1.3.2.min.js'
+            ], loadComplete);
+        }
+        setTimeout(loadscript,10);
+    </script>
+<style>
+  .panel-content { 
+    padding:15px; 
+  }
+  </style>
+
+</head>
+<body>
+
+<div data-role="page" id="page1" data-theme="c">
+        <div data-role="content">
+          <p align="center"><a href="#"><img class="popphoto" src="images/network.png" height="100px"></a></p>    
+        </div><!-- /content -->
+
+        <div data-role="content">
+           <br><br><p align="center"> <a href="#defaultpanel" data-rel="popup" class="ui-icon-alt" data-role="button" data-icon="grid" data-iconpos="notext" data-inline="true">主菜单</a></p><br><br><br>
+        </div><!-- /content -->
+
+
+  <!-- defaultpanel  -->
+  <div data-role="panel" id="defaultpanel" data-theme="a" data-display="overlay" data-position="right">	
+    <div class="panel-content">
+      <p align="center">my<font color="orange"><b>iMobile</b></font>
+     <br><font size="2" >功能列表</font></p>
+
+<ul data-role="listview" data-inset="true" class="ui-icon-alt" data-theme="d">
+    <li data-icon="edit"><a href="#bar"   data-transition="flip">销售订单审批</a></li>
+    <li data-icon="edit"><a href="#poapprove" data-transition="flip">采购订单审批</a></li>
+    <li data-icon="search"><a href="#">运输监控</a></li>
+    <li data-icon="star"><a href="#" rel="external">客户关系管理</a></li>
+    <li data-icon="gear"><a href="#">我的设置</a></li>
+</ul>
+<br><br>
+      <p align="center"><a href="#" data-rel="close"  class="ui-icon-nodisc" data-role="button"  data-icon="back" data-iconshadow="false" data-iconpos="notext" data-theme="b" >Close</a></p>
+    </div><!-- /content wrapper for padding -->
+  </div><!-- /defaultpanel -->
+
+
+
+        <div data-role="content">
+          <p align="center"><a href="#"><img class="popphoto" src="images/imobile.png" height="50px"></a><br>
+          <a href="#"><img class="popphoto" src="images/es.png" height="40px"></a> </p>
+        </div><!-- /content -->
+
+    </div><!-- /page -->
+
+<!-- Start of second page -->
+<div data-role="page" id="bar">
+
+	<div data-role="header">
+		<h1>Bar</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+		<p><a href="#foo">Back to foo</a></p>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<div data-role="page" id="poapprove" data-theme="c">
+        <div data-role="content">
+          <p align="center"><a href="#"><img class="popphoto" src="images/Flaticon_9233.png" height="64px"></a><br>
+          待处理采购订单<br><font size="9" color="orange"><b><i>2</i></b></font></p>    
+        </div><!-- /content -->
+
+        <div data-role="content">
+
+<p align="center">
+<div data-role="collapsible" class="ui-icon-alt" data-theme="d" data-content-theme="d" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-mini="true" data-collapsed="false">
+    <h2>待审批采购订单</h2>
+<ul data-role="listview" data-filter="true" data-filter-placeholder="筛选订单..." data-inset="true" data-theme="d">
+    <li><a href="#poapprovedetail" data-transition="flow">
+         <h3>2011231A2</h3>
+        <p>客户单号: <font color="gray">DMS1110111</font></p>
+        <p>发货方: <font color="gray">上海通用</font></p>
+        <p>收货方: <font color="gray">南京4S店</font></p>
+        <p>从: <font color="gray">上海>上海>浦东新区>苗江路</font></p>
+        <p>至: <font color="gray">江苏>南京市>浦东新区>苗江路</font></p>
+        <p>箱数: <font color="gray">12</font></p>
+        <p>运输要求: <font color="gray">加急</font></p></a></li>
+    <li><a href="#poapprovedetail" data-transition="flow">
+         <h3>2011231A1</h3>
+        <p>客户单号: <font color="gray">DMS1110111</font></p>
+        <p>发货方: <font color="gray">上海通用</font></p>
+        <p>收货方: <font color="gray">南京4S店</font></p>
+        <p>从: <font color="gray">上海>上海>浦东新区>苗江路</font></p>
+        <p>至: <font color="gray">江苏>南京市>浦东新区>苗江路</font></p>
+        <p>箱数: <font color="gray">12</font></p>
+        <p>运输要求: <font color="gray">加急</font></p></a></li>
+</ul>
+</div>
+
+
+
+</p>
+
+           <br><br><p align="center"> <a href="#defaultpanel" data-rel="popup" class="ui-icon-alt" data-role="button" data-icon="grid" data-iconpos="notext" data-inline="true">主菜单</a></p><br>
+        </div><!-- /content -->
+
+
+    <!-- defaultpanel  -->
+  <div data-role="panel" id="defaultpanel" data-theme="a" data-display="overlay" data-position="right">	
+    <div class="panel-content">
+      <p align="center">my<font color="orange"><b>iMobile</b></font>
+     <br><font size="2" >功能列表</font></p>
+
+<ul data-role="listview" data-inset="true" class="ui-icon-alt" data-theme="d">
+    <li data-icon="edit"><a href="#bar"   data-transition="flip">销售订单审批</a></li>
+    <li data-icon="edit"><a href="#poapprove" data-transition="flip">采购订单审批</a></li>
+    <li data-icon="search"><a href="#">运输监控</a></li>
+    <li data-icon="star"><a href="#" rel="external">客户关系管理</a></li>
+    <li data-icon="gear"><a href="#">我的设置</a></li>
+</ul>
+<br><br>
+      <p align="center"><a href="#" data-rel="close"  class="ui-icon-nodisc" data-role="button"  data-icon="back" data-iconshadow="false" data-iconpos="notext" data-theme="b" >Close</a></p>
+    </div><!-- /content wrapper for padding -->
+  </div><!-- /defaultpanel -->
+
+
+        <div data-role="content">
+          <p align="center">
+          <a href="#"><img class="popphoto" src="images/imobile.png" height="45px"></a> </p>
+        </div><!-- /content -->
+
+    </div><!-- /page -->
+
+<div data-role="page" id="poapprovedetail" data-theme="c">
+        <div data-role="content">
+          <p align="center"><a href="#"><img class="popphoto" src="images/eye.png" height="64px"></a><br>
+          采购订单明细</p>    
+        </div><!-- /content -->
+
+        <div data-role="content">
+
+<p align="center">
+<div data-role="collapsible" class="ui-icon-alt" data-theme="c" data-content-theme="d" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-mini="true">
+    <h2>订单明细: 2011231A2</h2>
+<p><a href="#"><img class="popphoto" src="images/doc.png" height="20px"></a><br>
+         <font size="2" color="gray"><b>2011231A2 | </b>客户订单: DMS12111111</font><br>
+         <font size="2" color="gray"><b>发货方: </b>上海通用</font><br>
+         <font size="2" color="gray"><b>收货方: </b>南京4S</font><br>
+         <font size="2" color="gray"><b>货箱信息: </b>2| 3x4</font><br>
+</p>
+<p><a href="#"><img class="popphoto" src="images/pin.png" height="30px"></a><br>
+         <font size="2" color="gray"><b>发货地</b>上海>上海>浦东新区</font><br>
+         <font size="2" color="gray"><b>目的地</b>江苏>南京>下关</font><br>
+</p>
+
+</div>
+
+<div data-role="collapsible" class="ui-icon-alt" data-theme="c" data-content-theme="c" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-mini="true" data-collapsed="false">
+    <h2>概览信息</h2>
+
+<p align="center"><font size="4" >PO: 100004311</font></br>
+<font size="2" >上海惠普有限公司<br></font><font size="2" color="red">紧急采购</font><br><br>
+<a href="#"><img class="popphoto" src="images/dollar.png" height="30px"></a><br><font size="5" color="teal"><b>30,120</b></font></p>
+
+<p align="center">
+<a href="#popupMenu" data-rel="popup" data-role="button" data-inline="true" data-transition="slideup" data-icon="gear" data-theme="c">操作</a>
+<div data-role="popup" id="popupMenu" data-theme="d">
+        <ul data-role="listview" data-inset="true" style="min-width:210px;" data-theme="d">
+
+            <li data-icon="check"><a href="#POApprovedetailresult" data-transition="pop">批准</a></li>
+            <li data-icon="delete"><a href="#" rel="external">拒绝</a></li>
+        </ul>
+</div>
+
+
+</p>
+ 
+</div>
+
+</p>
+
+           <br><br><p align="center"> <a href="#defaultpanel" data-rel="popup" class="ui-icon-alt" data-role="button" data-icon="grid" data-iconpos="notext" data-inline="true">主菜单</a></p><br>
+        </div><!-- /content -->
+
+
+     <!-- defaultpanel  -->
+  <div data-role="panel" id="defaultpanel" data-theme="a" data-display="overlay" data-position="right">	
+    <div class="panel-content">
+      <p align="center">my<font color="orange"><b>iMobile</b></font>
+     <br><font size="2" >功能列表</font></p>
+
+<ul data-role="listview" data-inset="true" class="ui-icon-alt" data-theme="d">
+    <li data-icon="edit"><a href="#bar"   data-transition="flow">销售订单审批</a></li>
+    <li data-icon="edit"><a href="#poapprove" data-transition="flip">采购订单审批</a></li>
+    <li data-icon="search"><a href="#">运输监控</a></li>
+    <li data-icon="star"><a href="#" rel="external">客户关系管理</a></li>
+    <li data-icon="gear"><a href="#">我的设置</a></li>
+</ul>
+<br><br>
+      <p align="center"><a href="#" data-rel="close"  class="ui-icon-nodisc" data-role="button"  data-icon="back" data-iconshadow="false" data-iconpos="notext" data-theme="b" >Close</a></p>
+    </div><!-- /content wrapper for padding -->
+  </div><!-- /defaultpanel -->
+
+     <div data-role="content">
+          <p align="center">
+          <a href="#"><img class="popphoto" src="images/imobile.png" height="45px"></a> </p>
+        </div><!-- /content -->
+
+    </div><!-- /page -->
+
+<div data-role="page" id="POApprovedetailresult" data-theme="c">
+        <div data-role="content">
+          <p align="center"><a href="#"><img class="popphoto" src="images/approve.png" height="64px"></a><br><font size="2" color="green">审批确认</font></p>    
+        </div><!-- /content -->
+
+        <div data-role="content">
+
+<p align="center"><font size="4" >PO: 100004311</font></br>
+<font size="2" >上海惠普有限公司<br></font><font size="2" color="red">紧急采购</font><br><br>
+<a href="#"><img class="popphoto" src="images/dollar.png" height="30px"></a><br><font size="5" color="teal"><b>30,120</b></font></p>
+</div>
+
+
+    </div><!-- /page -->
+
+
+
+</body>
+</html>
